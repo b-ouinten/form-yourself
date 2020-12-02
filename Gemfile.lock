@@ -117,6 +117,8 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    js_cookie_rails (2.2.0)
+      railties (>= 3.1)
     jwt (2.2.2)
     listen (3.3.3)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -256,6 +258,7 @@ DEPENDENCIES
   dotenv-rails
   faker!
   jbuilder (~> 2.7)
+  js_cookie_rails
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pry
