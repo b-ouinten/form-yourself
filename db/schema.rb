@@ -42,15 +42,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_145208) do
     t.index ["jti"], name: "index_jwt_denylist_on_jti"
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "profile_type"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
+# Could not dump table "profiles" because of following StandardError
+#   Unknown type 'profile_type' for column 'type_value'
 
   create_table "session_participations", force: :cascade do |t|
     t.bigint "student_id"
