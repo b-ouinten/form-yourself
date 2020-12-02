@@ -339,6 +339,8 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 --
 -- Name: jwt_denylist id; Type: DEFAULT; Schema: public; Owner: -
+<<<<<<< HEAD
+=======
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
@@ -346,6 +348,7 @@ ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.c
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
+>>>>>>> develop
 --
 
 ALTER TABLE ONLY public.category_trainings ALTER COLUMN id SET DEFAULT nextval('public.category_trainings_id_seq'::regclass);
@@ -359,7 +362,7 @@ ALTER TABLE ONLY public.classrooms ALTER COLUMN id SET DEFAULT nextval('public.c
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: profiles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jwt_denylist ALTER COLUMN id SET DEFAULT nextval('public.jwt_denylist_id_seq'::regclass);
@@ -374,6 +377,8 @@ ALTER TABLE ONLY public.profiles ALTER COLUMN id SET DEFAULT nextval('public.pro
 
 --
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: -
+<<<<<<< HEAD
+=======
 --
 
 ALTER TABLE ONLY public.sessions ALTER COLUMN id SET DEFAULT nextval('public.sessions_id_seq'::regclass);
@@ -395,6 +400,7 @@ ALTER TABLE ONLY public.trainings ALTER COLUMN id SET DEFAULT nextval('public.tr
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
+>>>>>>> develop
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
@@ -409,6 +415,9 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
+<<<<<<< HEAD
+-- Name: jwt_denylist jwt_denylist_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+=======
 -- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -434,6 +443,7 @@ ALTER TABLE ONLY public.classrooms
 
 --
 -- Name: jwt_denylist_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+>>>>>>> develop
 --
 
 ALTER TABLE ONLY public.jwt_denylist
@@ -457,6 +467,9 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
+<<<<<<< HEAD
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+=======
 -- Name: sessions_participations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -482,6 +495,7 @@ ALTER TABLE ONLY public.trainings
 
 --
 -- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+>>>>>>> develop
 --
 
 ALTER TABLE ONLY public.users
