@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
+  get 'register', to: 'pages#index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :users, only: [:show]
+      resources :profiles, only: %i[show]
     end
   end
 
@@ -19,5 +21,6 @@ Rails.application.routes.draw do
       sessions: 'sessions',
       registrations: 'registrations'
     }
-  
+
+    match '*path', to: 'react#index', via: :get
 end

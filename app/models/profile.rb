@@ -4,7 +4,9 @@ class Profile < ApplicationRecord
   belongs_to :user
 
   # Validations
-  enum type_value: { admin: 'admin', teacher: 'teacher', student: 'student' }
-  validates :type_value, inclusion: { in: type_values.keys }
+  enum profile_type: [ :admin, :teacher, :student ]
+  validates :profile_type, inclusion: { in: profile_types.keys }
+
+  validates :profile_type, presence: true
   validates :user_id, uniqueness: true
 end

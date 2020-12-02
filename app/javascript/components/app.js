@@ -1,27 +1,34 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Switch
+  Link
 } from "react-router-dom";
 import "bootswatch/dist/cyborg/bootstrap.min.css";
 import {Navbar} from "./components/Navbar.js"
 
 
 
+import Routes from '../routes';
+
+import "bootswatch/dist/cyborg/bootstrap.min.css";
+
+
 const App = () => (
   <Router>
     <Navbar />
     <div>
-      Hello world !
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/register">Register</Link>
+      </li>
+    </ul>
+    <hr />
     </div>
-
-    <Switch>
-      <Route>
-
-      </Route>
-    </Switch>
+    <Routes />
   </Router>
-)
+);
 
-export default App;
+export default App

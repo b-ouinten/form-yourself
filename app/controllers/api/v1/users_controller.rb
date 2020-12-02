@@ -4,7 +4,6 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def show
     render json: @user, include: [:profile]
-    # render_resource(@user)
   end
 
   private
