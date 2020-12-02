@@ -11,5 +11,5 @@ class User < ApplicationRecord
   has_many :session_participations, class_name: 'SessionParticipation', foreign_key: 'student_id', dependent: :destroy
   has_many :sessions, through: :session_participations
 
-  has_many :trainings, class_name: 'Training', foreign_key: 'teacher_id'
+  has_many :trainings, :foreign_key => 'teacher_id', dependent: :destroy
 end
