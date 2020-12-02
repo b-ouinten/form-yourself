@@ -4,7 +4,7 @@ import {
   Link
 } from "react-router-dom";
 import "bootswatch/dist/cyborg/bootstrap.min.css";
-import {Navbar} from "./components/Navbar.js"
+import Navbar from "../components/Navbar/navbar"
 
 
 
