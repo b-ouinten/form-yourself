@@ -1,8 +1,10 @@
 import React from 'react'
+import Jumborton  from "../../components/jumborton"
+
 
 const Home = () => (
   <main>
-    <h1>Hello World</h1>
+    <Jumborton />
   </main>
 )
 
