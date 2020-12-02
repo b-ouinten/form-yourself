@@ -7,5 +7,9 @@ class User < ApplicationRecord
           :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 
   # Relationships
-  has_one :profile, dependent: :destroy 
+  has_one :profile, dependent: :destroy
+  has_many :session_participations, class_name: 'SessionParticipation', foreign_key: 'student_id', dependent: :destroy
+  has_many :sessions, through: :session_participations
+
+  has_many :trainings, class_name: 'Training', foreign_key: 'teacher_id'
 end
