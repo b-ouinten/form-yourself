@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  root to: 'pages#index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
@@ -20,5 +20,4 @@ Rails.application.routes.draw do
       registrations: 'registrations'
     }
   
-  get '*path', to: 'pages#index'
 end

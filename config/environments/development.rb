@@ -62,4 +62,7 @@ Rails.application.configure do
 
   # Define ActionMailer default url options
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Active sql intructions in migration, so it will be taken into account
+config.active_record.schema_format = :sql
 end
