@@ -16,17 +16,6 @@ import "bootswatch/dist/cyborg/bootstrap.min.css";
 const App = () => (
   <Router>
     <Navbar />
-    <div>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/register">Register</Link>
-      </li>
-    </ul>
-    <hr />
-    </div>
     <Routes />
   </Router>
 );
