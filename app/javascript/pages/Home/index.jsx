@@ -1,9 +1,11 @@
 import React from 'react'
+
+import Jumborton  from "../../components/jumborton"
 import TrainingCard from '../../components/TrainingCard'
 
 const Home = () => (
   <main>
-    <h1>Hello World</h1>
+    <Jumborton />
     <TrainingCard />
   </main>
 )
