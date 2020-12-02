@@ -352,7 +352,7 @@ ALTER TABLE ONLY public.category_trainings ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: profiles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.classrooms ALTER COLUMN id SET DEFAULT nextval('public.classrooms_id_seq'::regclass);
