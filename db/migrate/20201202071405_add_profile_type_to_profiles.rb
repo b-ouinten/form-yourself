@@ -3,10 +3,10 @@ class AddProfileTypeToProfiles < ActiveRecord::Migration[6.0]
     execute <<-SQL
       CREATE TYPE profile_type AS ENUM ('admin', 'teacher', 'student');
     SQL
-    add_column :profiles, :type, :profile_type
+    add_column :profiles, :type_value, :profile_type
   end
   def down
-    remove_column :profiles, :type
+    remove_column :profiles, :type_value
     execute <<-SQL
       DROP TYPE profile_type;
     SQL
