@@ -1,6 +1,6 @@
-class CreateSessionsParticipations < ActiveRecord::Migration[6.0]
+class CreateSessionParticipations < ActiveRecord::Migration[6.0]
   def change
-    create_table :sessions_participations do |t|
+    create_table :session_participations do |t|
       t.belongs_to :student, index: true
       t.belongs_to :session
 

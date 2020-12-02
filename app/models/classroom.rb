@@ -1,5 +1,5 @@
 class Classroom < ApplicationRecord
 
   # Relationships
-  has_many :sessiosn
+  has_many :sessions
 end

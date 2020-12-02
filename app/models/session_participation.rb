@@ -1,4 +1,4 @@
-class SessionsParticipation < ApplicationRecord
+class SessionParticipation < ApplicationRecord
 
   # Relationships
   belongs_to :session
