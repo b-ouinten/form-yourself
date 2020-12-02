@@ -5,12 +5,13 @@ import {
   Switch
 } from "react-router-dom";
 import "bootswatch/dist/cyborg/bootstrap.min.css";
-import Navbar from 'react-bootstrap/Navbar'
+import {Navbar} from "./components/Navbar.js"
 
 
 
 const App = () => (
   <Router>
+    <Navbar />
     <div>
       Hello world !
     </div>
