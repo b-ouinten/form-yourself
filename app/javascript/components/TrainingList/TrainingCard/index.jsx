@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TrainingCard = ({ title, description, teacher_name, next_sessions_date }) => (
-  <div className="card border-primary mb-3">
+  <div className="card border-primary mb-3" >
     <div className="card-header">
       <div className="card-title">{ title }</div>
     </div>
