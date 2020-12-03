@@ -27,7 +27,7 @@ const Navbar = ()  => (
 					</li>
 					<li className="nav-item">
 						<Link to="/calendar" className="nav-link">Calendrier</Link>
-					</li>
+				</li>
 				</ul>
 			</div>
 		</nav>

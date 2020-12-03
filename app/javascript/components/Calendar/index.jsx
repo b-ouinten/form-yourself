@@ -34,7 +34,6 @@ const Calendar = () => {
     )
   }
 
-
   return (
     <main className="container-fluid">
       <div className="row justifiy-content-center">
