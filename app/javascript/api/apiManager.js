@@ -1,6 +1,6 @@
 import { authCookieHandler } from '../tools';
 
-const { getAuthCookie } = authCookieHandler;
+const { setAuthCookie } = authCookieHandler;
 
 const root = '/api/v1';
 
@@ -18,7 +18,9 @@ const auth = (type, identifiers) => fetch(`${root}${urls[type]}`, {
   body: JSON.stringify({ user: identifiers }),
 })
   .then((response) => {
-    getAuthCookie('token', response.headers.get('Authorization'));
+    const token = response.headers.get('Authorization');
+    if (token)
+      setAuthCookie('token', token.split('Bearer ').pop());
     return response.json()
   });
 

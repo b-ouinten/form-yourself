@@ -5,7 +5,7 @@ import {
 import apiManager from '../../api/apiManager';
 import { authCookieHandler } from '../../tools';
 
-const { setAuthCookie, removeAuthCookie } = authCookieHandler;
+const { setAuthCookie, getAuthCookie, removeAuthCookie } = authCookieHandler;
 
 const authRequested = () => ({
   type: AUTH_REQUEST,
