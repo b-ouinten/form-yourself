@@ -37,23 +37,37 @@ const Auth = ({ children, type }) => {
   if (isAuthenticated) return <Redirect to="/" />;
 
   return (
-    <div className="auth">
-      <form onSubmit={handleSubmit} onInput={handleOnInput}>
-        <div className="container">
-          {
-            alert && (
-            <div className="warning">
-              <p>{alert}</p>
+    <nav className="login-form mt-5 mb-4 justify-content-center">
+      <div className="container">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-header bg-primary">
+              <h4 className="text-white text-center">{type.toUpperCase()}</h4>
             </div>
-            )
-          }
+            <div className="card-body">
+              <form onSubmit={handleSubmit} onInput={handleOnInput}>
+                <div className="container">
+                  {
+                    alert && (
+                    <div className="alert alert-danger">
+                      <p>{alert}</p>
+                    </div>
+                    )
+                  }
 
-          {children}
+                  {children}
 
-          {/* <button type="submit">Submit</button> */}
+                  <div className="form-group text-center">
+                    <button type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </nav>
+     
   );
 };
 

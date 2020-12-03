@@ -3,15 +3,18 @@ import Auth from '../Auth';
 
 const Login = () => (
   <Auth type="login">
-    <label htmlFor="identifier">
-      Identifier
-      <input type="text" placeholder="Enter username or email" name="identifier" />
-    </label>
-
-    <label htmlFor="password">
-      Password
-      <input type="password" placeholder="Enter password" name="password" />
-    </label>
+    <div className="form-group row">
+      <label htmlFor="email" className="col-md-5 text-md-right">
+        Email
+      </label>
+      <input type="text" placeholder="Enter your email" name="email" />
+    </div>
+    <div className="form-group row">
+      <label htmlFor="password" className="col-md-5 text-md-right">
+        Password
+      </label>
+      <input type="password" placeholder="Enter your password" name="password" />
+    </div>
   </Auth>
 );
 

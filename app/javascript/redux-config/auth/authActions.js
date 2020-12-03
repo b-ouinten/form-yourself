@@ -29,9 +29,15 @@ const handleAuth = (type, identifiers) => (dispatch) => {
   dispatch(authRequested());
   apiManager.auth(type, identifiers)
     .then((result) => {
+      console.log(result);
       if (result.errors) {
         dispatch(authFailed(
-          Object.entries(result.errors[0].detail).map(([key, value]) => [key, value.join(',')].join(',')).join(',')));
+          Object.entries(result.errors[0].detail).map(([key, value]) => [key, value.join(',')].join(',')).join(',')
+        ));
+      } else if (result.error) {
+        dispatch(authFailed(
+          result.error
+        ));
       } else {
         setAuthCookie('currentUserId', result.id);
         dispatch(authSuccess(result.id));

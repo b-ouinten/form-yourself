@@ -5,7 +5,7 @@ const { setAuthCookie } = authCookieHandler;
 const root = '/api/v1';
 
 const urls = {
-  register: '/signup',
+  signup: '/signup',
   login: '/login'
 }
 
