@@ -5,7 +5,7 @@ const Register = () => (
   <Auth type="register">
 <nav className="login-form mt-5 mb-4 justify-content-center">
   <div className="container">
-      <div className="col-md-7">
+      <div className="col-md-6">
           <div className="card">
               <div className="card-header bg-primary">
                 <h4 className="text-white text-center">Sign Up</h4>
