@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = ()  => (
 	
@@ -23,6 +24,9 @@ const Navbar = ()  => (
 					</li>
 					<li className="nav-item">
 						<a className="nav-link" href="/register/">Log Out</a>
+					</li>
+					<li className="nav-item">
+						<Link to="/calendar" className="nav-link">Calendrier</Link>
 					</li>
 				</ul>
 			</div>

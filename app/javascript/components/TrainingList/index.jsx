@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 import TrainingCard from './TrainingCard'
 
@@ -42,6 +43,7 @@ const TrainingList = () => {
       <h4 className="text-center">Voici la liste des formations</h4>
       <div className="row mb-5">
         <div className="col-md-8 text-center">
+          <Link to='/calendar'>Passer en mode calendrier</ Link>
         </div>
       </div>
 
