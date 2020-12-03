@@ -2,6 +2,7 @@ class Training < ApplicationRecord
 
   # Relationships
   belongs_to :teacher, class_name: 'User', foreign_key: 'teacher_id', validate: true
+  has_one :profile, through: :teacher
 
   has_many :sessions
 
