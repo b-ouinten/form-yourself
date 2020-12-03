@@ -14,10 +14,10 @@ const pagesMap = {
     label: 'Join us',
     page: <Register />,
   },
-    // login: {
-  //   label: 'Login',
-  //   page: <Login />,
-  // },
+  login: {
+  label: 'Login',
+  page: <Login />,
+  },
   calendar: {
     label: 'Sessions planning',
     page: <Calendar />,

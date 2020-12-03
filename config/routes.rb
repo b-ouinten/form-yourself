@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
   get 'register', to: 'pages#index'
+  get 'login', to: 'pages#index'
   get 'calendar', to: 'pages#index'
 
   namespace :api, defaults: { format: :json } do

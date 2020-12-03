@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 const setAuthCookie = (key, value) => {
   const authCookie = {
-    ...getAuthCookie(),
+    ...(getAuthCookie() || {}),
     [key]: value,
   };
 
@@ -12,7 +12,7 @@ const setAuthCookie = (key, value) => {
 const getAuthCookie = () => {
   const authCookie = Cookies.get('authCookie');
   if (authCookie) { return JSON.parse(authCookie); }
-  return {};
+  return null;
 };
 
 const removeAuthCookie = () => Cookies.remove('authCookie');
