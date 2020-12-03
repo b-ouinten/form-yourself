@@ -23,7 +23,7 @@ const Login = () => (
       <input type="password" placeholder="Enter password" name="password" />
         </div>
         <div className="form-group text-center">
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn btn-primary mx-5">Submit</button>
         </div>
       </div>
     </div>
