@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Jumborton  from "./jumborton"
+import Jumborton from "./jumborton"
 import TrainingList from '../../components/TrainingList'
 
 const Home = () => (
