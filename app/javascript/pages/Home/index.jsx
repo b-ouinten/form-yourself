@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Jumborton  from "../../components/jumborton"
+import Jumborton  from "../../components/Jumbotron"
 import TrainingCard from '../../components/TrainingCard'
 
 const Home = () => (

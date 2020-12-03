@@ -1,11 +1,11 @@
-import './auth.scss';
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { handleAuth } from '../../redux';
+import { handleAuth } from '../../redux-config';
 
 const Auth = ({ children, type }) => {
-  const { isAuthenticated, error } = useSelector((state) => state.authState);
+  const { isAuthenticated, errors } = useSelector((state) => state);
+
   const dispatch = useDispatch();
 
   const [alert, setAlert] = useState(null);
@@ -18,18 +18,18 @@ const Auth = ({ children, type }) => {
 
     const errors = inputs.reduce((acc, input) => (input[1] === '' ? [...acc, input[0]] : []), []);
 
-    if (errors.length) setAlert((`You must provide ${errors.length < 3 ? errors.join(' and ') : errors.join(', ')}.`));
+    if (errors.length) setAlert((`You must provide ${errors.join(' and ')}.`));
     else {
       setAlert(null);
-      dispatch(handleAuth(identifiers, type));
+      dispatch(handleAuth(type, identifiers));
     }
   };
 
   useEffect(
     () => {
-      setAlert(error);
+      setAlert(errors);
     },
-    [error],
+    [errors],
   );
 
   const handleOnInput = () => setAlert(null);

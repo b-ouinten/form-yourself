@@ -4,12 +4,12 @@ import {
   Switch
 } from "react-router-dom";
 
-import PagesContainer from './pages/pageContainer'; 
+import PageContainer from './pages/PageContainer'; 
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={PagesContainer} />
-    <Route path='/:slug' component={PagesContainer} />
+    <Route exact path="/" component={PageContainer} />
+    <Route path='/:slug' component={PageContainer} />
   </Switch>
 )
 
