@@ -42,7 +42,7 @@ const Auth = ({ children, type }) => {
         <div className="col-md-6">
           <div className="card">
             <div className="card-header bg-primary">
-              <h4 className="text-white text-center">{type.toUpperCase()}</h4>
+              <h5 className="text-white text-center">{type.toUpperCase()}</h5>
             </div>
             <div className="card-body">
               <form onSubmit={handleSubmit} onInput={handleOnInput}>

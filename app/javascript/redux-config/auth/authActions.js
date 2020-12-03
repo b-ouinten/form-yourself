@@ -47,6 +47,7 @@ const handleAuth = (type, identifiers) => (dispatch) => {
 };
 
 const handleDeauth = () => (dispatch) => {
+  apiManager.deauth();
   removeAuthCookie();
   dispatch(deauth());
 };
