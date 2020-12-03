@@ -14,7 +14,7 @@ const Day = ({ day, sessions }) => {
     <div className="card-body">
       { sessions.map( (session) => (
         <div className="row">
-          {session.training.title}
+          - {session.training.title}
         </div>
       ))}
     </div>
