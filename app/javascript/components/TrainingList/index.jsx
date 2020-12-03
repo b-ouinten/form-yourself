@@ -50,7 +50,7 @@ const TrainingList = () => {
 
       <div className="container">
         <div className="row">
-          { trainingsArray.map( (training) => (
+          { trainingsArray.map((training) => (
             <div className="col-md-4">
               <TrainingCard
                 title = { training.title }

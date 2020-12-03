@@ -1,24 +1,21 @@
 import React from 'react';
 import Auth from '../Auth';
 
-const Register = () => (
-  <Auth type="signup">
+const Login = () => (
+  <Auth type="login">
     <div className="form-group row">
       <label htmlFor="email" className="col-md-5 text-md-right">
         Email
       </label>
-      <input placeholder="Enter an email" name="email" />
+      <input type="text" placeholder="Enter your email" name="email" />
     </div>
     <div className="form-group row">
       <label htmlFor="password" className="col-md-5 text-md-right">
         Password
       </label>
-      <input type="password" placeholder="Enter a password" name="password" />
+      <input type="password" placeholder="Enter your password" name="password" />
     </div>
   </Auth>
-  
 );
 
-export default Register;
-
-
+export default Login;
