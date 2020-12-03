@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Day = ({ day, sessions }) => {
-  console.log(sessions)
   const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
   let this_day = days[day.getDay()]
   

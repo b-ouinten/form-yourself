@@ -29,7 +29,6 @@ const handleAuth = (type, identifiers) => (dispatch) => {
   dispatch(authRequested());
   apiManager.auth(type, identifiers)
     .then((result) => {
-      console.log(result);
       if (result.errors) {
         dispatch(authFailed(
           Object.entries(result.errors[0].detail).map(([key, value]) => [key, value.join(',')].join(',')).join(',')
