@@ -7,8 +7,6 @@ import { handleDeauth } from '../../redux-config';
 const Logout = () => {
   const dispatch = useDispatch();
 
-  console.log('logout');
-
   dispatch(handleDeauth());
 
   return <Redirect to="/login" />;

@@ -32,7 +32,7 @@ const deauth = () =>
       Authorization: `Bearer ${getAuthCookie().token}`,
       'Content-Type': 'application/json',
     },
-  }).then((response) => console.log(response))
+  })
 
 const API = {
   auth,
