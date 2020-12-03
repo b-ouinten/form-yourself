@@ -8,7 +8,7 @@ const Login = () => (
       <div className="col-md-6">
           <div className="card">
               <div className="card-header bg-primary">
-                <h4 className="text-white text-center">Log In</h4>
+                <h4 className="text-white text-center">Log-In</h4>
               </div>
               <div className="card-body">
               <div className="form-group row">
