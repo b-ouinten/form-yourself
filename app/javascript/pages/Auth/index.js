@@ -58,7 +58,7 @@ const Auth = ({ children, type }) => {
                   {children}
 
                   <div className="form-group text-center">
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="btn btn-primary mx-5">Submit</button>
                   </div>
                 </div>
               </form>
@@ -67,7 +67,6 @@ const Auth = ({ children, type }) => {
         </div>
       </div>
     </nav>
-     
   );
 };
 
