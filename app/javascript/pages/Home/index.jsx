@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 
 import Jumborton from "./jumborton";
 import TrainingList from '../../components/TrainingList';
 
 const Home = () => (
-    <main>
-      <Jumborton />
-      <TrainingList />
-    </main>
-  )
+  <main>
+    <Jumborton />
+    <TrainingList />
+  </main>
+)
   
-  export default Home
+export default Home

@@ -1,7 +1,7 @@
 import "bootswatch/dist/cyborg/bootstrap.min.css";
 
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Navbar from "./Navbar";
 import Routes from '../routes';
