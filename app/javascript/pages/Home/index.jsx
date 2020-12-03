@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Jumborton  from "../../components/jumborton"
-import TrainingCard from '../../components/TrainingCard'
+import Jumborton  from "./jumborton"
+import TrainingList from '../../components/TrainingList'
 
 const Home = () => (
   <main>
     <Jumborton />
-    <TrainingCard />
+    <TrainingList />
   </main>
 )
 
