@@ -39,9 +39,9 @@ const TrainingList = () => {
 
   return (
     <main>
+      <h4 className="text-center">Voici la liste des formations</h4>
       <div className="row mb-5">
         <div className="col-md-8 text-center">
-          <h1>Voici la liste des formations</h1>
         </div>
       </div>
 
