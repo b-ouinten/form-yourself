@@ -1,10 +1,12 @@
 import React from 'react'
 
+import Jumborton  from "../../components/jumborton"
+import TrainingCard from '../../components/TrainingCard'
+
 const Home = () => (
   <main>
-    <div>
-      Hello World
-    </div>
+    <Jumborton />
+    <TrainingCard />
   </main>
 )
 

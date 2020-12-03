@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_145208) do
+ActiveRecord::Schema.define(version: 2020_12_02_160952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,15 +42,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_145208) do
     t.index ["jti"], name: "index_jwt_denylist_on_jti"
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "profile_type"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
+# Could not dump table "profiles" because of following StandardError
+#   Unknown type 'profile_type' for column 'type_value'
 
   create_table "session_participations", force: :cascade do |t|
     t.bigint "student_id"
@@ -75,10 +68,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_145208) do
     t.string "title"
     t.text "description"
     t.bigint "teacher_id"
-    t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_trainings_on_category_id"
     t.index ["teacher_id"], name: "index_trainings_on_teacher_id"
   end
 
