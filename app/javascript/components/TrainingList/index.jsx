@@ -26,14 +26,19 @@ const TrainingList = () => {
     return next_sessions.map((session) => session.session_date)
   }
 
-  useEffect( () => {
-    fetch("http://localhost:3000/api/v1/trainings")
+  const fetch_trainings = (params) => {
+    fetch("/api/v1/trainings")
     .then((response) => response.json())
     .then((response) => {
       response?.map( (training) => {
         setTrainingsArray( previousArray => [training, ...previousArray] )
       })
     })
+  }
+
+  useEffect( () => {
+    console.log('search')
+    fetch_trainings()
   }, []);
 
   return (
