@@ -8,7 +8,7 @@ const Calendar = () => {
   const firstDay = new Date(y, m, 1);
 
   useEffect( () => {
-    fetch("http://localhost:3000/api/v1/trainings_sessions")
+    fetch("/api/v1/trainings_sessions")
       .then((response) => response.json())
       .then((response) => {
         response?.map( (session) => {

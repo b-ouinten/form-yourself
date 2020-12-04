@@ -7,7 +7,7 @@ const Login = () => (
       <label htmlFor="email" className="col-md-5 text-md-right">
         Email
       </label>
-      <input type="text" placeholder="Enter your email" name="email" />
+      <input placeholder="Enter your email" name="email" />
     </div>
     <div className="form-group row">
       <label htmlFor="password" className="col-md-5 text-md-right">
@@ -19,3 +19,8 @@ const Login = () => (
 );
 
 export default Login;
+
+
+
+
+

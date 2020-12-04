@@ -1,17 +1,34 @@
 import "bootswatch/dist/cyborg/bootstrap.min.css";
 
-import React from 'react';
-import { Provider } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from "react-redux";
 
 import Navbar from "./Navbar";
 import Routes from '../routes';
-import store from '../redux-config/store';
+import { authCookieHandler } from '../tools';
+import { authSuccess } from '../redux-config';
 
-const App = () => (
-    <Provider store={store}>
+const { getAuthCookie } = authCookieHandler;
+
+const App = () => {
+  const dispatch = useDispatch();
+
+  const authUserIfAuthCookieExist = () => {
+    const authCookie = getAuthCookie();
+    if (authCookie) { dispatch(authSuccess(authCookie.currentUserId)); }
+  };
+
+  useEffect(
+    () => { authUserIfAuthCookieExist(); },
+    [],
+  );
+  
+  return (
+    <>
       <Navbar />
       <Routes />
-    </Provider>
-);
+    </>
+  )
+};
 
 export default App;

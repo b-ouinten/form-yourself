@@ -14,8 +14,8 @@ const TrainingCard = ({ title, description, teacher_name, next_sessions_date }) 
           </footer>
         </div>
         <div className="col-md-6">
-          { next_sessions_date.map((date) => (
-            <div className="row">
+          { next_sessions_date.map((date, index) => (
+            <div key={index} className="row">
               { date }
             </div>
           ))}

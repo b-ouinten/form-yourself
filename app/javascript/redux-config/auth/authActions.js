@@ -5,7 +5,7 @@ import {
 import apiManager from '../../api/apiManager';
 import { authCookieHandler } from '../../tools';
 
-const { setAuthCookie, removeAuthCookie } = authCookieHandler;
+const { setAuthCookie, getAuthCookie, removeAuthCookie } = authCookieHandler;
 
 const authRequested = () => ({
   type: AUTH_REQUEST,
@@ -31,7 +31,12 @@ const handleAuth = (type, identifiers) => (dispatch) => {
     .then((result) => {
       if (result.errors) {
         dispatch(authFailed(
-          Object.entries(result.errors[0].detail).map(([key, value]) => [key, value.join(',')].join(',')).join(',')));
+          Object.entries(result.errors[0].detail).map(([key, value]) => [key, value.join(',')].join(',')).join(',')
+        ));
+      } else if (result.error) {
+        dispatch(authFailed(
+          result.error
+        ));
       } else {
         setAuthCookie('currentUserId', result.id);
         dispatch(authSuccess(result.id));
@@ -41,8 +46,13 @@ const handleAuth = (type, identifiers) => (dispatch) => {
 };
 
 const handleDeauth = () => (dispatch) => {
-  removeAuthCookie();
-  dispatch(deauth());
+  apiManager.deauth()
+  .then((response) => {
+    if (response.ok) {
+      removeAuthCookie();
+      dispatch(deauth());
+    }
+  });
 };
 
 export { handleAuth, authSuccess, handleDeauth };

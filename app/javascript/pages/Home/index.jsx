@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Jumborton from "./jumborton"
-import TrainingList from '../../components/TrainingList'
+import Jumborton from "./jumborton";
+import TrainingList from '../../components/TrainingList';
 
 const Home = () => (
   <main>
@@ -9,5 +9,5 @@ const Home = () => (
     <TrainingList />
   </main>
 )
-
+  
 export default Home
