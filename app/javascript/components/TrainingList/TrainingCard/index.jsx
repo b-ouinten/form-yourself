@@ -14,9 +14,10 @@ const TrainingCard = ({ title, description, teacher_name, next_sessions_date }) 
           </footer>
         </div>
         <div className="col-md-6">
+          <p>Prochaines formations :</p>
           { next_sessions_date.map((date, index) => (
-            <div key={index} className="row">
-              { date }
+            <div key={index} className="row justify-content-center">
+              { new Date(date).getDate() }   -  { new Date(date).getMonth() }
             </div>
           ))}
         </div>
