@@ -13,8 +13,7 @@ class Training < ApplicationRecord
     where('lower(title) LIKE ? ', "%#{keyword.downcase}%")
   }
 
-  def self.search(params = {})
-    trainings = params[:training_ids].present? ? Training.find(params[:training_ids]) : Training.all
-    trainings = trainings.filter_by_title(params[:keyword]) if params[:keyword]
+  def self.search(params)
+    trainings = Training.all
   end
 end

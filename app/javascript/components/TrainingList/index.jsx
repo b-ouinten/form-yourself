@@ -29,7 +29,7 @@ const TrainingList = () => {
   
 
   useEffect( () => {
-    fetch("http://localhost:3000/api/v1/trainings")
+    fetch("/api/v1/trainings")
       .then((response) => response.json())
       .then((response) => {
         response?.map( (training) => {
