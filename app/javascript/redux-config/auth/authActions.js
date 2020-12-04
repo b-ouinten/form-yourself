@@ -5,7 +5,7 @@ import {
 import apiManager from '../../api/apiManager';
 import { authCookieHandler } from '../../tools';
 
-const { setAuthCookie, getAuthCookie, removeAuthCookie } = authCookieHandler;
+const { setAuthCookie, removeAuthCookie } = authCookieHandler;
 
 const authRequested = () => ({
   type: AUTH_REQUEST,
@@ -46,13 +46,9 @@ const handleAuth = (type, identifiers) => (dispatch) => {
 };
 
 const handleDeauth = () => (dispatch) => {
-  apiManager.deauth()
-  .then((response) => {
-    if (response.ok) {
-      removeAuthCookie();
-      dispatch(deauth());
-    }
-  });
+  apiManager.deauth();
+  dispatch(deauth());
+  removeAuthCookie();
 };
 
 export { handleAuth, authSuccess, handleDeauth };

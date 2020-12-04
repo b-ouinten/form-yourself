@@ -9,7 +9,6 @@ const urls = {
   login: '/login',
 }
 
-
 const auth = (type, identifiers) => 
   fetch(`${root}${urls[type]}`, {
     method: 'post',
